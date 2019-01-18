@@ -6,7 +6,7 @@ MODULE:=github.com/lomik/go-carbon
 GO ?= go
 export GOPATH := $(CURDIR)/_vendor
 TEMPDIR:=$(shell mktemp -d)
-VERSION:=$(shell sh -c 'grep "const Version" $(NAME).go  | cut -d\" -f2')
+VERSION:="$(shell sh -c 'grep "const Version" $(NAME).go  | cut -d\" -f2')-1.jjneely"
 BUILD ?= $(shell git describe --abbrev=4 --dirty --always --tags)
 
 all: $(NAME)
