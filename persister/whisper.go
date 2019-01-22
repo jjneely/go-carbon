@@ -244,7 +244,7 @@ func (p *Whisper) store(metric string) {
 			p.taggedFn(metric, true)
 		}
 
-		p.createLogger.Debug("created",
+		p.createLogger.Info("created",
 			zap.String("path", path),
 			zap.String("retention", schema.RetentionStr),
 			zap.String("schema", schema.Name),
