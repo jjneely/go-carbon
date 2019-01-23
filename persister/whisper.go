@@ -229,6 +229,7 @@ func (p *Whisper) store(metric string) {
 		}
 
 		p.createLogger.Info("created",
+			zap.String("metric", metric),
 			zap.String("path", path),
 			zap.String("retention", schema.RetentionStr),
 			zap.String("schema", schema.Name),
